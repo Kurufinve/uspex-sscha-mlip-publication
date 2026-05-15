@@ -1,0 +1,10 @@
+#!/bin/bash
+#SBATCH -N 1
+#SBATCH -n 1
+#SBATCH -J LaH10-mattersim
+#SBATCH -o sscha_output
+#SBATCH -e error
+
+source ~/miniconda3/bin/activate sscha
+source ~/miniconda3/envs/sscha/subenvs/mattersim/bin/activate
+python ../sscha_relax_iap_learn.py input_sscha.py > sscha_output 
